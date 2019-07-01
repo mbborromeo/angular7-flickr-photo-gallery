@@ -1,0 +1,8 @@
+<h2>Public Photos</h2>
+<ul class="heroes">
+  <li *ngFor="let photo of photos" [class.selected]="photo === selectedPhoto" (click)="onSelect(photo)">
+    <span class="badge">{{photo.id}}</span> {{photo.title}}
+  </li>
+</ul>
+
+<app-photo-detail [photo]="selectedPhoto"></app-photo-detail>
