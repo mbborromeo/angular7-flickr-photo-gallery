@@ -23,7 +23,7 @@ export class PhotoService {
   private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';
   private callbackParamKey = 'jsoncallback';//JSONP_CALLBACK
 
-  //Define your own callback function for Flickr API call.  Currently not being used.
+  //Define own callback function for Flickr API call.  Currently not being used.
   jsonFlickrApi(data) {
     console.log("jsonFlickrApi data is: ", data);
   }
@@ -35,7 +35,7 @@ export class PhotoService {
     // Send the message _after_ fetching the heroes
     //this.messageService.add('PhotoService: fetched photos');
 
-    // Get photos from the server
+    // Get photos from the server with error handling
     return this.http.jsonp(this.photosUrl, this.callbackParamKey)
       .pipe(
         tap(_ => this.log('fetched photos')), //replaces this.messageService.add()
