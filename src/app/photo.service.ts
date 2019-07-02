@@ -37,4 +37,9 @@ export class PhotoService {
     //return this.http.get<Photo[]>(this.photosUrl);
     return this.http.jsonp(this.photosUrl, this.photosUrlCallback); //optional second arg is callbackParam: string
   }
+
+
+  jsonFlickrFeed(data) { //jsonFlickrApi
+    console.log("Your data is: ", data);
+  }
 }
