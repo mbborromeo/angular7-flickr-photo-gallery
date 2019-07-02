@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { PhotosComponent } from './photos/photos.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+//import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MessagesComponent } from './messages/messages.component';
     MessagesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    //HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
