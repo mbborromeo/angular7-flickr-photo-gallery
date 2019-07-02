@@ -8,17 +8,17 @@
 
 <section id="section-gallery">
   <div id="container">
-    <div *ngFor="let photo of photos" class="tile" (click)="onSelect(photo)">
-      <div class="background-tile" ><!-- style="background-image: url(' {{photo.media.m}} ');"  -->
-        <img src="{{photo.media.m}}" alt="{{photo.title}}" />
-        <!--
-        <div class="hover-text">
-          <span>{{photo.title}}</span>
-          <br />
-          {{photo.date_taken}}
+    <div *ngFor="let photo of photos;" class="tile" (click)="onSelect(photo)">
+        <div class="background-tile" ><!-- style="background-image: url(' {{photo.media.m}} ');"  -->
+          <img src="{{photo.media.m}}" alt="{{photo.title}}" />
+          <!--
+          <div class="hover-text">
+            <span>{{photo.title}}</span>
+            <br />
+            {{photo.date_taken}}
+          </div>
+          -->
         </div>
-        -->
-      </div>
     </div>
   </div>
 </section>

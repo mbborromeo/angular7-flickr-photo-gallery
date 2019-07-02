@@ -1,4 +1,5 @@
 export class Photo {
+  id: number;
   title: string;
   link: string;
   media: {}; //eg. {"m":"https:\/\/live.staticflickr.com\/file39_m.jpg"}

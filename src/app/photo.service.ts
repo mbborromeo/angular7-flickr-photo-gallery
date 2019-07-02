@@ -37,4 +37,12 @@ export class PhotoService {
     // Get photos from the server
     return this.http.jsonp(this.photosUrl, this.callbackParamKey); //this.http.get<Photo[]>(this.photosUrl);
   }
+
+  /*
+  getPhoto(id: number): Observable<Photo> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(HEROES.find(photo => photo.id === photo));
+  }
+  */
 }

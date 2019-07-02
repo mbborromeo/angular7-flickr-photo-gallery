@@ -1,3 +1,11 @@
+<!-- modal display -->
+<div id="display" (click)="onClose()">
+  <figure *ngIf="photo" id="imgFull">
+      <img src="{{photo.media.m}}" alt="{{photo.title}}" />
+      <figcaption id="heading">{{photo.title}}</figcaption>
+  </figure>
+</div>
+
 <!--
 <div *ngIf="photo">
   <h2>{{photo.title | uppercase}} Details</h2>
@@ -5,14 +13,3 @@
   <img src="{{photo.media.m}}" alt="{{photo.title}}" />
 </div>
 -->
-
-<!-- modal display -->
-<div *ngIf="photo" id="display" (click)="onClose()">
-  <figure id="imgFull">
-      <img src="{{photo.media.m}}" alt="{{photo.title}}" />
-      <figcaption id="heading">{{photo.title}}</figcaption>
-      <!-- <a class="btn" id="prevBtn" href="#">&lt;</a>
-      <a class="btn" id="nextBtn" href="#">&gt;</a> -->
-  </figure>
-</div>
-<!-- end modal display -->

@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Photo } from '../photo';
+import { PhotoService }  from '../photo.service';
 
 @Component({
   selector: 'app-photo-detail',
@@ -14,7 +17,11 @@ export class PhotoDetailComponent implements OnInit {
     document.getElementById("display").style.display = "none";
   }
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private heroService: PhotoService,
+    private location: Location
+  ) {}
 
   ngOnInit() {
   }
