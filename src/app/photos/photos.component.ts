@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from '../photo';
-//import { PHOTOS } from '../mock-photos';
 import { PhotoService } from '../photo.service';
 
 @Component({
@@ -9,14 +8,14 @@ import { PhotoService } from '../photo.service';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
+  /*
   photo: Photo = {
-    /*id: 1,
-    title: 'Windstorm'*/
+    //id: 1,
     title: 'Numero Uno',
     author: 'Michael'
   };
+  */
 
-  //photos = PHOTOS;
   photos: Photo[];
 
   selectedPhoto: Photo;
@@ -26,9 +25,8 @@ export class PhotosComponent implements OnInit {
   }
 
   getPhotos(): void {
-    //this.photos = this.photoService.getPhotos();
     this.photoService.getPhotos()
-      .subscribe(photos => this.photos = photos);
+      .subscribe(data => this.photos = data.items);
   }
 
   constructor(private photoService: PhotoService) { }
@@ -36,5 +34,4 @@ export class PhotosComponent implements OnInit {
   ngOnInit() {
     this.getPhotos();
   }
-
 }

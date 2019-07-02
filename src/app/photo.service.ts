@@ -25,8 +25,8 @@ export class PhotoService {
    * api/photos if using InMemoryDataService
    */
   //private photosUrl: string = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';
-  private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json';
-  private photosUrlCallback = 'jsonFlickrApi';
+  private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';//?nojsoncallback=1, ?jsoncallback=?
+  private callbackParamKey = 'jsoncallback';//jsonFlickrApi, &jsoncallback=jsonFlickrApi, JSONP_CALLBACK
 
   //getPhotos(): Observable<Photo[]> {
   getPhotos(): Observable<any> {
@@ -35,11 +35,10 @@ export class PhotoService {
     //return of(PHOTOS);
     // GET heroes from the server
     //return this.http.get<Photo[]>(this.photosUrl);
-    return this.http.jsonp(this.photosUrl, this.photosUrlCallback); //optional second arg is callbackParam: string
+    return this.http.jsonp(this.photosUrl, this.callbackParamKey); //optional second arg is callbackParam: string
   }
 
-
-  jsonFlickrFeed(data) { //jsonFlickrApi
-    console.log("Your data is: ", data);
+  jsonFlickrFeed(data) { //
+    console.log("jsonFlickrFeed data is: ", data);
   }
 }
