@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from '../photo';
-import { PHOTOS } from '../mock-photos';
+//import { PHOTOS } from '../mock-photos';
 import { PhotoService } from '../photo.service';
 
 @Component({
@@ -10,8 +10,10 @@ import { PhotoService } from '../photo.service';
 })
 export class PhotosComponent implements OnInit {
   photo: Photo = {
-    id: 1,
-    title: 'Windstorm'
+    /*id: 1,
+    title: 'Windstorm'*/
+    title: 'Numero Uno',
+    author: 'Michael'
   };
 
   //photos = PHOTOS;
