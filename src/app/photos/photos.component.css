@@ -58,7 +58,6 @@
 #container {
     width: 100%;
     height: 100%;
-    /*border: 1px solid yellow;*/
     /* opacity: 0;
     transition: 1s;*/
 }
@@ -69,7 +68,6 @@
     width: 33.33%;
     height: 33.33%;
     display: inline-block;
-    /*float: left;*/
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -81,7 +79,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    /*z-index: 0;*/
     background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
@@ -171,8 +168,6 @@
 }
 
 #display figure figcaption {
-    /*position: absolute;*/
-    /*bottom: 0;*/
     text-align: center;
     font-weight: bold;
     color: black;
@@ -207,7 +202,6 @@
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design
-
    iPhone 8: 414px (w) x 736px (h)
    iPhone X: 375px (w) x 812px (h)
    iPad: 1024px (w) x 768px (h)
@@ -218,21 +212,6 @@
         display: block;
         float: none;
     }
-
-    /*
-    header {
-        width: 100%;
-        height: 16%;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    header span {
-        font-size: 25px;
-    }
-    */
 }
 
 @media only screen and (max-width: 812px) and (orientation: landscape) {
@@ -240,12 +219,6 @@
         height: 100%;
         width: 100%;
     }
-
-    /*
-    header {
-        padding: 1.5% 2%;
-    }
-    */
 
     #display figure img {
         max-width: 60vw;
@@ -255,35 +228,6 @@
 @media only screen and (max-width: 812px) and (orientation: portrait) {
     .tile {
         width: 100%;
-        height: 33.33%; /* 50% */
-    }
-
-    /*
-    header {
-        padding: 4% 3%;
-        height: 10%;
-    }
-    */
-}
-
-/*
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-    header {
-        padding: 4% 2%;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header span {
-        font-size: 30px;
+        height: 33.33%;
     }
 }
-
-@media only screen and (max-width: 320px) and (max-height: 480px) and (orientation: portrait) {
-    header {
-        padding: 2% 3%;
-    }
-}
-*/

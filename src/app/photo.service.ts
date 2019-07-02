@@ -22,7 +22,7 @@ export class PhotoService {
   private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';
   private callbackParamKey = 'jsoncallback';//JSONP_CALLBACK
 
-  //TO DO: Define your own function to render photo gallery
+  //Define your own callback function for Flickr API call.  Currently not being used.
   jsonFlickrApi(data) {
     console.log("jsonFlickrApi data is: ", data);
   }

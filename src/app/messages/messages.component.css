@@ -5,9 +5,11 @@ h4 {
   font-weight: lighter;
   margin-bottom: 0;
 }
+
 body {
   margin: 2em;
 }
+
 body, input[text], button {
   color: crimson;
   font-family: Cambria, Georgia;
@@ -22,14 +24,17 @@ button.clear {
   cursor: hand;
   font-size: 13px;
 }
+
 button:hover {
   background-color: grey;
 }
+
 button:disabled {
   background-color: #eee;
   color: #aaa;
   cursor: auto;
 }
+
 button.clear {
   color: #333;
   margin-bottom: 12px;
