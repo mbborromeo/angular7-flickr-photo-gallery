@@ -19,7 +19,7 @@ export class PhotoDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: PhotoService,
+    private photoService: PhotoService,
     private location: Location
   ) {}
 
