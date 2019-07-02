@@ -14,7 +14,6 @@
     To be able to change image while grey bg on.
     */
     /*pointer-events: none; */ /* cannot use when img is clicked to hide this */
-
     /*initially hidden*/
     display: none;
     opacity: 0;
@@ -22,9 +21,6 @@
 }
 
 #display figure {
-    /*border-radius: 15px; */
-    max-width: 80vw; /* view width percentage of */
-    /*max-height: 80vh;*/ /* view height percentage of */
     position: absolute;
     left: 50%;
     top: 50%;

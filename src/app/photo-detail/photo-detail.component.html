@@ -1,7 +1,8 @@
 <!-- modal display -->
 <div id="display" (click)="onClose()">
   <figure *ngIf="photo" id="imgFull">
-      <img src="{{photo.media.m}}" alt="{{photo.title}}" />
+      <!-- use Javascript replace() to change to big image -->
+      <img src="{{photo.media.m.replace('_m', '_b')}}" alt="{{photo.title}}" />
       <figcaption id="heading">{{photo.title}}</figcaption>
   </figure>
 </div>
