@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Technologies I used are: Angular 7, CSS, and HTML5 Boilerplate v6.0.1/Modernizr.
 
-The layout is mobile responsive, and has been cross-browser compatibility tested on IE11+, Firefox and Chrome.
+The layout is mobile responsive, and has been cross-browser compatibility tested on IE10+, Firefox and Chrome.
 
-To run locally, download the Repository from Git and follow the commands below.
+To run locally, download or clone the Repository from Git and follow the commands below.
 
 ## Development server
 
