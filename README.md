@@ -6,7 +6,7 @@ Technologies I used are: Angular 7, Flickr API, CSS, and HTML5 Boilerplate v6.0.
 
 Cross-browser compatibility tested on browsers: IE10+, Firefox and Chrome.
 
-This project refers to the Angular.io Tour of Heroes tutorial (https://angular.io/tutorial) but is modified.
+I referred to the [Angular Tour of Heroes tutorial](https://angular.io/tutorial) while making this, but modified it to suit this project.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
