@@ -22,6 +22,11 @@ export class PhotoService {
   private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';
   private callbackParamKey = 'jsoncallback';//JSONP_CALLBACK
 
+  //TO DO: Define your own function to render photo gallery
+  jsonFlickrApi(data) {
+    console.log("jsonFlickrApi data is: ", data);
+  }
+
   /*
    * Have to use http.jsonp() to call to Flickr 3rd Party API to avoid CORS (cross origin resource sharing) issue
    * */
@@ -31,10 +36,5 @@ export class PhotoService {
 
     // Get photos from the server
     return this.http.jsonp(this.photosUrl, this.callbackParamKey); //this.http.get<Photo[]>(this.photosUrl);
-  }
-
-  //TO DO: Define your own function to render photo gallery
-  jsonFlickrFeed(data) {
-    console.log("jsonFlickrFeed data is: ", data);
   }
 }

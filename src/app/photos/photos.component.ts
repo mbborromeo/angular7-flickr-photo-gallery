@@ -8,20 +8,11 @@ import { PhotoService } from '../photo.service';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
-  /*
-  photo: Photo = {
-    //id: 1,
-    title: 'Numero Uno',
-    author: 'Michael'
-  };
-  */
-
   photos: Photo[];
-
   selectedPhoto: Photo;
 
-  onSelect(photo: Photo): void {
-    this.selectedPhoto = photo;
+  onSelect(p: Photo): void {
+    this.selectedPhoto = p;
   }
 
   getPhotos(): void {

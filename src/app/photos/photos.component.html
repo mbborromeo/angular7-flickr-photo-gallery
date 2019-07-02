@@ -1,7 +1,7 @@
 <h2>Public Photos</h2>
 <ul class="heroes">
   <li *ngFor="let photo of photos" [class.selected]="photo === selectedPhoto" (click)="onSelect(photo)">
-    <span class="badge">{{photo.title}}</span> {{photo.title}}
+    <span class="badge">{{photo.title}}</span> {{photo.date_taken}}
   </li>
 </ul>
 
