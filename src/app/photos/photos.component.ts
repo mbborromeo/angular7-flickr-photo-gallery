@@ -13,6 +13,9 @@ export class PhotosComponent implements OnInit {
 
   onSelect(p: Photo): void {
     this.selectedPhoto = p;
+    /* show modal */
+    document.getElementById("display").style.display = "block";
+    document.getElementById("display").style.opacity = "1";
   }
 
   getPhotos(): void {

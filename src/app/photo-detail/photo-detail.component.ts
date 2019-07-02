@@ -9,6 +9,11 @@ import { Photo } from '../photo';
 export class PhotoDetailComponent implements OnInit {
   @Input() photo: Photo;
 
+  onClose(): void {
+    document.getElementById("display").style.opacity = "0";
+    document.getElementById("display").style.display = "none";
+  }
+
   constructor() { }
 
   ngOnInit() {
