@@ -22,13 +22,15 @@ export class PhotoService {
   private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';
   private callbackParamKey = 'jsoncallback';//JSONP_CALLBACK
 
+  /*
+   * Have to use http.jsonp() to call to Flickr 3rd Party API to avoid CORS (cross origin resource sharing) issue
+   * */
   getPhotos(): Observable<any> { //Observable<Photo[]>
-    // send the message _after_ fetching the heroes
+    // Send the message _after_ fetching the heroes
     this.messageService.add('PhotoService: fetched photos');
 
-    // GET photos from the server
-    //return this.http.get<Photo[]>(this.photosUrl);
-    return this.http.jsonp(this.photosUrl, this.callbackParamKey);
+    // Get photos from the server
+    return this.http.jsonp(this.photosUrl, this.callbackParamKey); //this.http.get<Photo[]>(this.photosUrl);
   }
 
   //TO DO: Define your own function to render photo gallery
