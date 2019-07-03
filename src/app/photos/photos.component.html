@@ -1,8 +1,8 @@
 <section id="section-gallery">
   <div id="container">
     <div *ngFor="let photo of photos;" class="tile" (click)="onSelect(photo)"><!-- [class.selected]="photo === selectedPhoto" -->
-        <div class="background-tile" ><!-- style="background-image: url(' {{photo.media.m}} ');"  -->
-          <img src="{{photo.media.m}}" alt="{{photo.title}}" />
+        <!-- <div class="background-tile" style="background-image: url(' {{photo.media.m}} ');"> -->
+        <div class="background-tile" [ngStyle]="{ 'background-image': 'url(' + photo.media.m + ')' }" >
           <!--
           <div class="hover-text">
             <span>{{photo.title}}</span>
