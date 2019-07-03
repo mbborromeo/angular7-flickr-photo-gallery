@@ -92,13 +92,6 @@
     transform: scale(1.03)!important;
 }
 
-/*
-.tile .background-tile img {
-  width: 100%;
-  height: inherit;
-}
-*/
-
 .tile .hover-text {
     background-color: white;
     color: black;
