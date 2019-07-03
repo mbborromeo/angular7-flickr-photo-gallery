@@ -20,13 +20,8 @@ export class PhotoService {
     this.messageService.add(`PhotoService: ${message}`);
   }
 
-  private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonFlickrApi';
-  private callbackParamKey = 'jsoncallback';//JSONP_CALLBACK
-
-  //Define own callback function for Flickr API call.  Currently not being used.
-  jsonFlickrApi(data) {
-    console.log("jsonFlickrApi data is: ", data);
-  }
+  private photosUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json'; //&jsoncallback=jsonFlickrApi
+  private callbackParamKey = 'jsoncallback'; //Angular will assign its own function ng_jsonp_callback_0 as the callback argument for API call in URL
 
   /**
    * Have to use http.jsonp() to call to Flickr 3rd Party API to avoid CORS (cross origin resource sharing) issue
