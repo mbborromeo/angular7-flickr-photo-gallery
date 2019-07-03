@@ -3,13 +3,11 @@
     <div *ngFor="let photo of photos;" class="tile" (click)="onSelect(photo)">
         <!-- Using [ngStyle] instead to overcome XSS Cross Site Scripting vulnerability  -->
         <div class="background-tile" [ngStyle]="{ 'background-image': 'url(' + photo.media.m + ')' }" >
-          <!--
           <div class="hover-text">
             <span>{{photo.title}}</span>
             <br />
             {{photo.date_taken}}
           </div>
-          -->
         </div>
     </div>
   </div>
