@@ -14,6 +14,12 @@ export class PhotoDetailComponent implements OnInit {
 
   onClose(): void {
     document.getElementById("display").style.opacity = "0";
+
+    //clear image
+    document.getElementById("imgFull").getElementsByTagName("img")[0].src = "";
+    //document.getElementById("imgFull").style.opacity = "0";
+    //end clear image
+
     document.getElementById("display").style.display = "none";
   }
 

@@ -24,9 +24,10 @@ export class PhotoService {
   private callbackParamKey = 'jsoncallback'; //Angular will assign its own function ng_jsonp_callback_0 as the callback argument for API call in URL
 
   /**
-   * Have to use http.jsonp() to call to Flickr 3rd Party API to avoid CORS (cross origin resource sharing) issue
+   * Have to use http.jsonp() to call to Flickr 3rd Party API to avoid CORS (cross origin resource sharing) issue.
+   * Returns a JSON object which has property items which includes an array of photos.
    */
-  getPhotos(): Observable<any> { //Observable<Photo[]>
+  getPhotos(): Observable<any> {
     // Send the message _after_ fetching the heroes
     //this.messageService.add('PhotoService: fetched photos');
 

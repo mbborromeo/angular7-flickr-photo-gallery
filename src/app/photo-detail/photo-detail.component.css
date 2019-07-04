@@ -27,25 +27,25 @@
     margin: 0;
     background-color: white;
     text-align: center;
+    /*opacity: 0;*/
 }
 
 #display #imgFull img {
     border: 6px solid white;
     border-bottom: 0;
-    /*display: block;  */
-    /* width: auto; */
     max-width: 80vw; /* 100% */
     max-height: 80vh;
     /*height: auto;
     max-height: 100%;*/
 }
 
-#display #imgFull figcaption {
+#display #imgFull heading {
     text-align: center;
     font-weight: bold;
     color: black;
     padding-top: 5px;
     padding-bottom: 2px;
+    /*opacity: 0;*/
 }
 
 #display .btn {
@@ -73,3 +73,9 @@
     right: 1px;
 }
 */
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+    #display imgFull img {
+        max-width: 60vw;
+    }
+}

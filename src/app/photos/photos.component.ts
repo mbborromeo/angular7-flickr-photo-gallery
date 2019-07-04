@@ -16,6 +16,20 @@ export class PhotosComponent implements OnInit {
     //show modal
     document.getElementById("display").style.display = "block";
     document.getElementById("display").style.opacity = "1";
+
+    /*
+    //Wait until image has loaded before changing title and updating buttons
+    document.getElementById("imgFull").getElementsByTagName("img")[0].addEventListener(
+        "load",
+        function(){
+            //showButtons();
+
+            //show image and heading inside modal
+            document.getElementById("heading").style.opacity = "1";
+            document.getElementById("imgFull").style.opacity = "1";
+        }
+    );
+    */
   }
 
   getPhotos(): void {
