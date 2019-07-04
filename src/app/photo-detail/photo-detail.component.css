@@ -27,7 +27,7 @@
     margin: 0;
     background-color: white;
     text-align: center;
-    /*opacity: 0;*/
+    opacity: 0;
 }
 
 #display #imgFull img {
@@ -39,13 +39,14 @@
     max-height: 100%;*/
 }
 
-#display #imgFull heading {
+#display #imgFull #heading {
     text-align: center;
     font-weight: bold;
     color: black;
     padding-top: 5px;
     padding-bottom: 2px;
-    /*opacity: 0;*/
+    opacity: 0;
+    display: none;
 }
 
 #display .btn {
