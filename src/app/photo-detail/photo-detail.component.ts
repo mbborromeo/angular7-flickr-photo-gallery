@@ -10,17 +10,24 @@ import { PhotoService }  from '../photo.service';
   styleUrls: ['./photo-detail.component.css']
 })
 export class PhotoDetailComponent implements OnInit {
-  @Input() photo: Photo;
+  //@Input() photo: Photo;
+  photo: Photo;
 
-  onClose(): void {
-    document.getElementById("display").style.opacity = "0";
+  getPhoto(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    /*
+    this.photoService.getPhoto(id)
+      .subscribe(photo => this.photo = photo);
+    */
 
-    //clear image
-    document.getElementById("imgFull").getElementsByTagName("img")[0].src = "";
-    //document.getElementById("imgFull").style.opacity = "0";
-    //end clear image
+    //Working but gets index from latest subscribe, not what was on homepage.
+    this.photoService.getPhotos()
+      .subscribe(data => this.photo = data.items[ id ]);
 
-    document.getElementById("display").style.display = "none";
+    //this.photo = this.photoService.getPhoto( id );
+
+    //this.photo = this.photoService.imagesAll[ id ];
+
   }
 
   constructor(
@@ -29,7 +36,7 @@ export class PhotoDetailComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getPhoto();
   }
-
 }

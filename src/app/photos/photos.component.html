@@ -1,6 +1,6 @@
 <section id="section-gallery">
   <div id="container">
-    <div *ngFor="let photo of photos;" class="tile" (click)="onSelect(photo)">
+    <a *ngFor="let photo of photos; index as i;" routerLink="/detail/{{ i }}" class="tile"><!-- <div -->
         <!-- Using [ngStyle] instead to overcome XSS Cross Site Scripting vulnerability  -->
         <div class="background-tile" [ngStyle]="{ 'background-image': 'url(' + photo.media.m + ')' }" >
           <div class="hover-text">
@@ -9,8 +9,8 @@
             {{photo.date_taken}}
           </div>
         </div>
-    </div>
+    </a><!-- </div> -->
   </div>
 </section>
 
-<app-photo-detail [photo]="selectedPhoto"></app-photo-detail>
+<!-- <app-photo-detail [photo]="selectedPhoto"></app-photo-detail> -->
