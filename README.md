@@ -1,16 +1,6 @@
 # Angular7FlickrGallery
 
-Mobile responsive photo gallery displaying images from Flickr Public Feed in a lightbox.
-
-Technologies I used are: Angular 7, Flickr API, CSS, and HTML5 Boilerplate v6.0.1/Modernizr.
-
-Cross-browser compatibility tested on: IE10+, Firefox and Chrome.
-
-I referred to the [Angular Tour of Heroes tutorial](https://angular.io/tutorial) while making this, but adapted it to suit this project.
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
-
-To run locally, download or clone the Repository from Git and follow the commands below.
 
 ## Development server
 

@@ -10,17 +10,14 @@ import { PhotoService }  from '../photo.service';
   styleUrls: ['./photo-detail.component.css']
 })
 export class PhotoDetailComponent implements OnInit {
-  @Input() photo: Photo;
+  photo: Photo;
 
-  onClose(): void {
-    document.getElementById("display").style.opacity = "0";
+  getPhoto(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
 
-    //clear image
-    document.getElementById("imgFull").getElementsByTagName("img")[0].src = "";
-    //document.getElementById("imgFull").style.opacity = "0";
-    //end clear image
-
-    document.getElementById("display").style.display = "none";
+    this.photoService.getPhotos()
+      //.subscribe(data => this.photo = data.items[ id ]);
+      .then(data => this.photo = data[ id ]);
   }
 
   constructor(
@@ -29,7 +26,7 @@ export class PhotoDetailComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getPhoto();
   }
-
 }
