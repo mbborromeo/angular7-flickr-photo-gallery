@@ -20,6 +20,10 @@ export class PhotoDetailComponent implements OnInit {
       .then(data => this.photo = data[ id ]);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
   constructor(
     private route: ActivatedRoute,
     private photoService: PhotoService,

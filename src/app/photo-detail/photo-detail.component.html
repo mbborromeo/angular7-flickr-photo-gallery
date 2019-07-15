@@ -1,5 +1,5 @@
 <!-- modal display -->
-<div id="display">
+<div id="display" (click)="goBack()">
   <figure id="imgFull"><!-- *ngIf="photo" -->
       <!-- use Javascript replace() to change to big image -->
       <img *ngIf="photo" src="{{photo.media.m.replace('_m', '_b')}}" alt="{{photo.title}}" />
