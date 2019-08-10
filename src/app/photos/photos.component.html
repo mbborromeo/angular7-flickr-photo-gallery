@@ -1,6 +1,5 @@
 <section id="section-gallery">
   <div id="container">
-<<<<<<< HEAD
     <a *ngFor="let photo of photos; index as i;" routerLink="/detail/{{ i }}" class="tile">
       <!-- Using [ngStyle] instead to overcome XSS Cross Site Scripting vulnerability  -->
       <div class="background-tile" [ngStyle]="{ 'background-image': 'url(' + photo.media.m + ')' }" >
@@ -11,7 +10,7 @@
         </div>
       </div>
     </a>
-=======
+
     <a *ngFor="let photo of photos; index as i;" routerLink="/detail/{{ i }}" class="tile"><!-- <div -->
         <!-- Using [ngStyle] instead to overcome XSS Cross Site Scripting vulnerability  -->
         <div class="background-tile" [ngStyle]="{ 'background-image': 'url(' + photo.media.m + ')' }" >
@@ -22,7 +21,6 @@
           </div>
         </div>
     </a><!-- </div> -->
->>>>>>> 2991001ba9f86f241af6c75ac96ef3c910e87532
   </div>
 </section>
 
