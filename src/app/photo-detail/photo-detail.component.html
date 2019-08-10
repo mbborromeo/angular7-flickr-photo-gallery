@@ -4,8 +4,5 @@
       <!-- use Javascript replace() to change to big image -->
       <img *ngIf="photo" src="{{photo.media.m.replace('_m', '_b')}}" alt="{{photo.title}}" />
       <figcaption id="heading"><span *ngIf="photo">{{photo.title}}</span></figcaption>
-
-      <!--<a class="btn" id="prevBtn" href="#">&lt;</a>
-      <a class="btn" id="nextBtn" href="#">&gt;</a>-->
   </figure>
 </div>
