@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular7-flickr-gallery';
+  title = 'Angular 7 Flickr photo gallery';
+
+  constructor(){
+  }
 }

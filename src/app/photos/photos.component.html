@@ -1,0 +1,16 @@
+<section id="section-gallery">
+  <div id="container">
+    <a *ngFor="let photo of photos; index as i;" routerLink="/detail/{{ i }}" class="tile">
+      <!-- Using [ngStyle] instead to overcome XSS Cross Site Scripting vulnerability  -->
+      <div class="background-tile" [ngStyle]="{ 'background-image': 'url(' + photo.media.m + ')' }" >
+        <div class="hover-text">
+          <span>{{photo.title}}</span>
+          <br />
+          {{photo.date_taken}}
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- <app-photo-detail [photo]="selectedPhoto"></app-photo-detail> -->
