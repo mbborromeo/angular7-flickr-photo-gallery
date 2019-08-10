@@ -14,6 +14,12 @@ To run locally, download or clone the Repository from Git and follow the command
 
 ## Development server
 
+Install the project dependencies by typing in command-line:
+`npm install`
+
+First install Angular CLI which allows you to run the 'ng' commands, by typing in the command-line:
+`npm install -g @angular/cli`
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
