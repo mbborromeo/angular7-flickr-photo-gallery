@@ -30,6 +30,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+Once you have run `ng build --prod`, you then need to run `ng build --prod --output-path docs --base-href /<git_project_name>/` to create the 'docs' folder that GitHub Pages will use as the web server files.
+
+When the build is complete, make a copy of docs/index.html and name it docs/404.html.
+
+Commit your changes on Git and push.
+
+On the GitHub project page, configure it to publish from the 'docs' folder.
+
+Once this deployment has been done, the live preview of the site can be viewed at:
+https://mbborromeo.github.io/angular7-flickr-photo-gallery/
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
